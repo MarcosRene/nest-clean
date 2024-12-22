@@ -11,15 +11,15 @@ import { Env } from 'src/env'
       inject: [ConfigService],
       global: true,
       useFactory: (config: ConfigService<Env, true>) => {
-        const privateKey = Buffer.from(config.get('JWT_PRIVATE_KEY'), 'base64')
-        const publicKey = Buffer.from(config.get('JWT_PUBLIC_KEY'), 'base64')
+        const privateKey = config.get('JWT_PRIVATE_KEY')
+        const publicKey = config.get('JWT_PUBLIC_KEY')
 
         return {
           signOptions: {
             algorithm: 'RS256',
           },
-          privateKey,
-          publicKey,
+          privateKey: Buffer.from(privateKey, 'base64'),
+          publicKey: Buffer.from(publicKey, 'base64'),
         }
       },
     }),
