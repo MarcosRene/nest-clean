@@ -57,3 +57,7 @@ report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
 #Env
 .env
+private_key.pem
+private-key-base64.txt
+public_key.pem
+public-key-base64.txt
