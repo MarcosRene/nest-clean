@@ -7,8 +7,8 @@ import {
 } from '@nestjs/common'
 import { JwtService } from '@nestjs/jwt'
 import { compare } from 'bcryptjs'
-import { ZodValidationPipe } from 'src/pipes/zod-validation-pipe'
-import { PrismaService } from 'src/prisma/prima.service'
+import { ZodValidationPipe } from '@/pipes/zod-validation-pipe'
+import { PrismaService } from '@/prisma/prima.service'
 import { z } from 'zod'
 
 const authenticateBodySchema = z.object({
@@ -48,6 +48,6 @@ export class AuthenticateController {
 
     const accessToken = this.jwt.sign({ sub: user.id })
 
-    return { acess_token: accessToken }
+    return { access_token: accessToken }
   }
 }
