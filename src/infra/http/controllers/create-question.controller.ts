@@ -4,7 +4,7 @@ import { CurrentUser } from '@/infra/auth/current-user-demorator'
 import { UserPayload } from '@/infra/auth/jwt.strategy'
 import { z } from 'zod'
 import { ZodValidationPipe } from '@/infra/http/pipes/zod-validation-pipe'
-import { PrismaService } from '@/infra/prisma/prima.service'
+import { PrismaService } from '@/infra/database/prisma/prima.service'
 
 const createQuestionBodySchema = z.object({
   title: z.string(),
