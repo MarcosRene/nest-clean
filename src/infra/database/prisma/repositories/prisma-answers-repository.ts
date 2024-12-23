@@ -1,7 +1,8 @@
+import { Injectable } from '@nestjs/common'
+
 import { PaginationParams } from '@/core/repositories/pagination-params'
 import { AnswersRepository } from '@/domain/forum/application/repositories/answer-repository'
 import { Answer } from '@/domain/forum/enterprise/entities/answer'
-import { Injectable } from '@nestjs/common'
 
 @Injectable()
 export class PrismaAnswersRepository implements AnswersRepository {

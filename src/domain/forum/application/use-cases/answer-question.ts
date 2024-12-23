@@ -1,9 +1,10 @@
-import { UniqueEntityID } from '@/core/entities/unique-entity-id'
-import { Answer } from '@/domain/forum/enterprise/entities/answer'
-import { AnswersRepository } from '@/domain/forum/application/repositories/answer-repository'
 import { Either, right } from '@/core/either'
-import { AnswerAttachmentList } from '../../enterprise/entities/answer-attachment-list'
+import { UniqueEntityID } from '@/core/entities/unique-entity-id'
+import { AnswersRepository } from '@/domain/forum/application/repositories/answer-repository'
+import { Answer } from '@/domain/forum/enterprise/entities/answer'
+
 import { AnswerAttachment } from '../../enterprise/entities/answer-attachment'
+import { AnswerAttachmentList } from '../../enterprise/entities/answer-attachment-list'
 
 interface AnswerQuestionUseCaseRequest {
   instructorId: string

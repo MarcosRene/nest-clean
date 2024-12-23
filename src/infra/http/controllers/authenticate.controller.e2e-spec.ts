@@ -1,9 +1,10 @@
-import { AppModule } from '@/infra/app.module'
-import { PrismaService } from '@/infra/database/prisma/prima.service'
 import { INestApplication } from '@nestjs/common'
 import { Test } from '@nestjs/testing'
 import { hash } from 'bcryptjs'
 import request from 'supertest'
+
+import { AppModule } from '@/infra/app.module'
+import { PrismaService } from '@/infra/database/prisma/prima.service'
 
 describe('Authenticate Controller (E2E)', () => {
   let app: INestApplication

@@ -1,9 +1,10 @@
-import { AppModule } from '@/infra/app.module'
-import { PrismaService } from '@/infra/database/prisma/prima.service'
 import { INestApplication } from '@nestjs/common'
 import { JwtService } from '@nestjs/jwt'
 import { Test } from '@nestjs/testing'
 import request from 'supertest'
+
+import { AppModule } from '@/infra/app.module'
+import { PrismaService } from '@/infra/database/prisma/prima.service'
 
 describe('Fetch Recent Questions Controller (E2E)', () => {
   let app: INestApplication
