@@ -10,13 +10,19 @@ import { PrismaAnswersRepository } from './prisma/repositories/prisma-answers-re
 import { PrismaQuestionAttachmentsRepository } from './prisma/repositories/prisma-question-attachments-repository'
 import { PrismaQuestionCommentsRepository } from './prisma/repositories/prisma-question-comments-repository'
 import { PrismaQuestionsRepository } from './prisma/repositories/prisma-questions-repository'
-import { PrismaStudendsRepository } from './prisma/repositories/prisma-students-repository'
+import { PrismaStudentsRepository } from './prisma/repositories/prisma-students-repository'
 
 @Module({
   providers: [
     PrismaService,
-    { provide: QuestionsRepository, useClass: PrismaQuestionsRepository },
-    { provide: StudentsRepository, useClass: PrismaStudendsRepository },
+    {
+      provide: QuestionsRepository,
+      useClass: PrismaQuestionsRepository,
+    },
+    {
+      provide: StudentsRepository,
+      useClass: PrismaStudentsRepository,
+    },
     PrismaQuestionCommentsRepository,
     PrismaQuestionAttachmentsRepository,
     PrismaAnswersRepository,

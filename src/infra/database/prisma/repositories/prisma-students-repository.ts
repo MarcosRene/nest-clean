@@ -7,7 +7,7 @@ import { PrismaStudentMapper } from '../../mappers/prisma-student-mapper'
 import { PrismaService } from '../prima.service'
 
 @Injectable()
-export class PrismaStudendsRepository implements StudentsRepository {
+export class PrismaStudentsRepository implements StudentsRepository {
   constructor(private prisma: PrismaService) {}
 
   async findByEmail(email: string): Promise<Student | null> {
