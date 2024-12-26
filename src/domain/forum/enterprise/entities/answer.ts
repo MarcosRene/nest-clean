@@ -11,7 +11,7 @@ export interface AnswerProps {
   authorId: UniqueEntityID
   questionId: UniqueEntityID
   createdAt: Date
-  updatedAt?: Date
+  updatedAt?: Date | null
 }
 
 export class Answer extends AggregateRoot<AnswerProps> {
