@@ -61,3 +61,8 @@ private_key.pem
 private-key-base64.txt
 public_key.pem
 public-key-base64.txt
+
+
+# Http requests
+local.client.http
+
