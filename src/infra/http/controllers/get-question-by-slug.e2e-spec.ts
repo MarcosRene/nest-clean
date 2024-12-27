@@ -8,11 +8,9 @@ import { StudentFactory } from 'test/factories/make-student'
 import { Slug } from '@/domain/forum/enterprise/entities/value-objects/slug'
 import { AppModule } from '@/infra/app.module'
 import { DatabaseModule } from '@/infra/database/database.module'
-import { PrismaService } from '@/infra/database/prisma/prima.service'
 
 describe('Get Question By Slug (E2E)', () => {
   let app: INestApplication
-  let prisma: PrismaService // eslint-disable-line
   let studentFactory: StudentFactory
   let questionFactory: QuestionFactory
   let jwt: JwtService
@@ -25,7 +23,6 @@ describe('Get Question By Slug (E2E)', () => {
 
     app = moduleRef.createNestApplication()
 
-    prisma = moduleRef.get(PrismaService)
     studentFactory = moduleRef.get(StudentFactory)
     questionFactory = moduleRef.get(QuestionFactory)
     jwt = moduleRef.get(JwtService)
