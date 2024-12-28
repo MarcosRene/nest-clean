@@ -65,7 +65,7 @@ describe('Fetch Question Comments Controller (E2E)', () => {
     expect(response.body).toEqual({
       comments: expect.arrayContaining([
         expect.objectContaining({ content: 'Comment 01' }),
-        expect.objectContaining({ content: 'Comment 01' }),
+        expect.objectContaining({ content: 'Comment 02' }),
       ]),
     })
   })
