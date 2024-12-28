@@ -30,7 +30,7 @@ export function makeAnswerComment(
 export class AnswerCommentFactory {
   constructor(private prismaService: PrismaService) {}
 
-  async makePrismaQuestion(
+  async makePrismaAnswerCommment(
     data: Partial<AnswerCommentProps> = {},
   ): Promise<AnswerComment> {
     const question = makeAnswerComment(data)
