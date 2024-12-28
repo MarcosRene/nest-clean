@@ -69,7 +69,7 @@ model Comment {
   updatedAt  DateTime? @updatedAt @map("updated_at")
   authorId   String    @map("author_id")
   questionId String?   @map("question_id")
-  answerId   String?   @unique @map("answer_id")
+  answerId   String?   @map("answer_id")
 
   author   User      @relation(fields: [authorId], references: [id])
   question Question? @relation(fields: [questionId], references: [id])
@@ -83,7 +83,7 @@ model Attachment {
   title      String
   url        String
   questionId String? @map("question_id")
-  answerId   String? @unique @map("answer_id")
+  answerId   String? @map("answer_id")
 
   question Question? @relation(fields: [questionId], references: [id])
   anwser   Answer?   @relation(fields: [answerId], references: [id])
