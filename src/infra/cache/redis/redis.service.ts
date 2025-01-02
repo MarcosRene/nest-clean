@@ -1,10 +1,11 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 // @ts-nocheck
-import { OnModuleDestroy } from '@nestjs/common'
+import { Injectable, OnModuleDestroy } from '@nestjs/common'
 import { Redis } from 'ioredis'
 
 import { EnvService } from '@/infra/env/env.server'
 
+@Injectable()
 export class RedisService extends Redis implements OnModuleDestroy {
   constructor(envService: EnvService) {
     super({
